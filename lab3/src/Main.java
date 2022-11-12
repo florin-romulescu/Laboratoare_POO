@@ -1,5 +1,20 @@
+import task1.*;
+
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Scanner scanner = new Scanner(System.in);
+        int number = scanner.nextInt();
+        String street = scanner.next();
+        String message = scanner.next();
+
+        Area area = new Area(number, street, message, new CandyBag());
+
+        System.out.println("With instanceof:");
+        area.getBirthdayCard();
+        System.out.println();
+        System.out.println("Without instanceof:");
+        area.getBirthdayCardv2();
     }
 }
